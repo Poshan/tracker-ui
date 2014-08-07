@@ -1,0 +1,23 @@
+#banner{
+	height:15%;
+}
+#lower-outer-box{
+	height:85%;
+	border:solid;
+	border-radius: 10px;
+	border-color: black;
+}
+#logo-image{
+	display: inline-block;
+	width:50%;
+}
+#reglog{
+	display: inline-block;
+	width:49%;
+}
+#login{
+	height: 12%;
+}
+#register{
+	height:22%;
+}
