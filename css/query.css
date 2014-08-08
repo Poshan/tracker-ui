@@ -1,0 +1,45 @@
+#container{
+	width:99%;
+	height:100%;
+	background-color: beige;
+}
+#top-one{
+	position:relative;
+	height:42px;
+	padding-left: 10px;
+	background-color: darkmagenta;
+}
+#top-one>div>h1{
+	margin: 2px;
+	padding-top: 2px;
+}
+#title{
+	width:200px;
+	display:inline-block;
+}
+#settings-image-tracks{
+	display: inline-block;
+	padding-left: 500px;
+	vertical-align: text-bottom;
+}
+#view-tracks-button{
+	display: inline-block;
+}
+#settings-button-logout{
+	display: inline-block;
+}
+#settings-logout-button{
+	display: block;
+	position:relative;
+}
+#logout-button{
+	display: block;
+}
+#user-name{
+	display: inline-block;
+}
+#user-name h1{
+	margin-top: 2px;
+	font-size: 30px;
+	padding-right: 25px;
+}
