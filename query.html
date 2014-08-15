@@ -2,9 +2,31 @@
 <head>
 	<title>Look at your and your friends locations </title>
 	<link rel="stylesheet" href="css/query.css"/>
-	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	
+
+	<!--
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.	css">
+	<link rel = "stylesheet" href = "css/leaflet.css"/>
+	-->
+	
+
+	<!--for testing in local -->
+	<link rel = "stylesheet" href = "css/bootstrap.min1.css" />
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<link rel = "stylesheet" href = "css/leaflet.usermarker.css"/>
+
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 	<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<script type = "text/javascript" src = "js/leaflet.usermarker.js"></script>
+	
+	
+	<!--for local
+	<script type = "text/javascript" src = "js/bootstrap.min.js"></script>
+	<script type = "text/javascript" src  = "js/jquery-1.7.2.min.js"></script>
+	<script type = "text/javascript" src = "js/leaflet.js"></script>
+	-->
+	
 </head>
 <body>
 <div id= "container">
@@ -14,10 +36,11 @@
 		</div>
 		<div id = "settings-image-tracks">
 			<div id = "user-name">
-				<h1>POshaN</h1>
+				<h1><i>User-name</i></h1>
 			</div>
 			<div id = "view-tracks-button">
-				<button type="button" id="view-tracks" class="btn btn-primary" onclick= "button_click()">View Tracks            
+				<button type="button" id="view-tracks" class="btn btn-primary" onclick= "button_click()">
+					View Tracks            
   				</button>
   			</div>
   			
@@ -28,14 +51,71 @@
 	                	<li><a href="http://kathmandulivinglabs.org/tracker/logout.php">Logout</a></li>        
 	            	</ul>
 	  			</div>
-			</div>
-
-		
+			</div>	
 		</div>
-
 	</div>
-
+	<div id = "open-profile-container">
+		<a href="#" onclick = "openTheContainer()">Profile</a>
+	</div>
+	
+	<div id="profile-container">
+		<div id = "profile-content">
+			<div id="personal-info">
+				<!--<div id ="username">
+					<h1>
+						username
+					</h1>
+				</div>-->
+				<div id= "image">
+					<img src = "http://kathmandulivinglabs.org/tracker/uploaded_files/1407303881-WIN_20140520_074608.JPG"/>
+				</div>
+				<div id = "search">
+			        <label for="search">Search:</label>
+			        <input id="search" />
+			        <button id = "search-button" disabled onclick = 'connect()'>Connect</button>
+				</div>
+			</div>
+    		<ul class="nav nav-tabs">
+      			<li class="active"><a href="#viewing-pane" data-toggle="tab"><span class="glyphicon glyphicon-user"></span>Viewing</a></li>
+      			<li><a href="#viewes-pane" data-toggle="tab"><span class="glyphicon glyphicon-user"></span>Viewes</a></li>
+      			<li><a href="#lists-pane" data-toggle="tab"><span class="glyphicon glyphicon-list"></span> Lists</a></li>
+    		</ul>
+    		<div class = "tab-content">
+    			<div class="tab-pane active" id="viewing-pane">
+    				Nirab </br>
+    				Nirab </br>
+    				Nirab </br>
+    				Nirab </br>
+    				Nirab </br>
+    				Nirab </br>
+    				Nirab </br>Nirab </br>Nirab </br>Nirab </br>Nirab </br>Nirab </br>Nirab </br>Nirab </br>Nirab </br>Nirab </br>Nirab </br>Nirab </br>Nirab </br>Nirab </br>Nirab </br>Nirab </br>Nirab </br>Nirab </br>Nirab </br>Nirab </br>Nirab </br>
+    			</div>
+    			<div class="tab-pane" id="viewes-pane">
+    			</div>
+    			<div class="tab-pane" id="lists-pane">
+    			</div>
+    		</div>
+		</div>
+		<div id = "close-icon">
+			<a href="#" onclick = "hideProfileTab()">close</a>
+		</div>
+	</div>
+	<div id= "map"></div>
+		
 </div>
+<script type = "text/javascript" src = "js/map.js"></script>
+<script>
+	$('#profile-container').hide();
+	// $('#viewing')
+	function hideProfileTab(){
+		$('#open-profile-container').show();
+		$('#profile-container').hide();
+	}
+	function openTheContainer(){
+		$('#profile-container').show();
+		$('#open-profile-container').hide();
+	}
+</script>
 
 </body>
 </html>
